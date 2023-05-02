@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+  </head>
+  <body>
+    <h1>Calculator</h1>
+    <form>
+      <input type="text" name="result" id="result" readonly>
+      <br><br>
+      <input type="button" value="1" onclick="addValue('1')">
+      <input type="button" value="2" onclick="addValue('2')">
+      <input type="button" value="3" onclick="addValue('3')">
+      <input type="button" value="+" onclick="addValue('+')">
+      <br>
+      <input type="button" value="4" onclick="addValue('4')">
+      <input type="button" value="5" onclick="addValue('5')">
+      <input type="button" value="6" onclick="addValue('6')">
+      <input type="button" value="-" onclick="addValue('-')">
+      <br>
+      <input type="button" value="7" onclick="addValue('7')">
+      <input type="button" value="8" onclick="addValue('8')">
+      <input type="button" value="9" onclick="addValue('9')">
+      <input type="button" value="*" onclick="addValue('*')">
+      <br>
+      <input type="button" value="C" onclick="clearValue()">
+      <input type="button" value="0" onclick="addValue('0')">
+      <input type="button" value="=" onclick="calculate()">
+      <input type="button" value="/" onclick="addValue('/')">
+    </form>
+    <script>
+      function addValue(value) {
+        document.getElementById("result").value += value;
+      }
+      function clearValue() {
+        document.getElementById("result").value = "";
+      }
+      function calculate() {
+        var result = eval(document.getElementById("result").value);
+        document.getElementById("result").value = result;
+      }
+    </script>
+  </body>
+</html>
